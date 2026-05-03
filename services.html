@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | TAKAHIRO UEDA</title>
+  <meta name="description" content="AIコンサル・LP制作・チャットボット・SNS自動化など、幅広いサービスを提供しています。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* サービスページ独自スタイル */
+    .services-page-hero {
+      background:
+        linear-gradient(rgba(27,42,74,0.82), rgba(27,42,74,0.90)),
+        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1400&auto=format&fit=crop&q=80') center/cover no-repeat;
+      padding: 100px 40px 72px;
+      text-align: center;
+      color: #fff;
+    }
+    .services-page-hero .page-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      color: #C9A84C;
+      margin-bottom: 12px;
+    }
+    .services-page-hero h1 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .services-page-hero p {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.9;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="header-logo">TAKAHIRO <span>UEDA</span></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="flow.html">Flow & Price</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ヒーロー（背景写真付き） -->
+    <div class="services-page-hero">
+      <p class="page-label">Services</p>
+      <h1>提供サービス</h1>
+      <p>AIを使って、あなたのビジネスをもっとシンプルに。<br>まずはお気軽にご相談ください。</p>
+    </div>
+
+    <!-- サービス一覧 -->
+    <section>
+      <div class="section-inner">
+
+        <!-- AIコンサルティング -->
+        <div class="service-detail-block">
+          <div class="service-detail-img-wrap">
+            <img
+              class="service-detail-img"
+              src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&auto=format&fit=crop&q=80"
+              alt="AIコンサルティング"
+              loading="lazy"
+            >
+          </div>
+          <div class="service-detail-body">
+            <p class="label">AI CONSULTING</p>
+            <h2>AIコンサルティング</h2>
+            <p>「AIって何から始めれば？」という疑問から、御社の業務に合ったAI活用方法を一緒に考えます。導入方針の策定から、ツール選定、実装サポートまで幅広く対応しています。</p>
+            <p class="note">対象：AI活用を検討中の中小企業・個人事業主</p>
+          </div>
+        </div>
+
+        <!-- LP制作 -->
+        <div class="service-detail-block reverse">
+          <div class="service-detail-img-wrap">
+            <img
+              class="service-detail-img"
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80"
+              alt="LP制作"
+              loading="lazy"
+            >
+          </div>
+          <div class="service-detail-body">
+            <p class="label">LP PRODUCTION</p>
+            <h2>LP制作</h2>
+            <p>反応率を意識したランディングページを制作します。デザインだけでなく、訴求力のある文章（コピーライティング）も含めてトータルでサポート。</p>
+            <p class="note">料金：市場相場に準じた価格でご提案。修正・変更は別途ご相談。</p>
+          </div>
+        </div>
+
+        <!-- チャットボット -->
+        <div class="service-detail-block">
+          <div class="service-detail-img-wrap">
+            <img
+              class="service-detail-img"
+              src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&auto=format&fit=crop&q=80"
+              alt="チャットボット作成"
+              loading="lazy"
+            >
+          </div>
+          <div class="service-detail-body">
+            <p class="label">CHATBOT</p>
+            <h2>チャットボット作成（Dify）</h2>
+            <p>AIアプリ開発ツール「Dify」を活用したチャットボットを構築します。社内FAQ・問い合わせ自動化・営業サポートなど、用途に合わせてカスタマイズ。非エンジニアでも管理しやすい仕組みで納品します。</p>
+            <p class="note">対応例：FAQ自動応答、社内ナレッジBot、見積もりBot</p>
+          </div>
+        </div>
+
+        <!-- システム開発 -->
+        <div class="service-detail-block reverse">
+          <div class="service-detail-img-wrap">
+            <img
+              class="service-detail-img"
+              src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&auto=format&fit=crop&q=80"
+              alt="システム開発"
+              loading="lazy"
+            >
+          </div>
+          <div class="service-detail-body">
+            <p class="label">SYSTEM DEVELOPMENT</p>
+            <h2>システム開発</h2>
+            <p>HPページ自動化システムなど、業務の手間を減らす仕組みを開発します。「こんなことを自動化したい」というご要望をお聞きし、実現可能かどうかも含めてご相談ください。</p>
+            <p class="note">対応例：HP自動更新、データ収集・整形の自動化</p>
+          </div>
+        </div>
+
+        <!-- 動画編集 -->
+        <div class="service-detail-block">
+          <div class="service-detail-img-wrap">
+            <img
+              class="service-detail-img"
+              src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&auto=format&fit=crop&q=80"
+              alt="動画編集"
+              loading="lazy"
+            >
+          </div>
+          <div class="service-detail-body">
+            <p class="label">VIDEO EDITING</p>
+            <h2>動画編集</h2>
+            <p>SNS投稿用・採用PR・サービス紹介など、目的に合わせた動画編集をサポートします。撮影素材をお送りいただければ、カット・テロップ・BGMなどを含めて仕上げます。</p>
+            <p class="note">対応例：Reels・TikTok・YouTube Shorts・会社紹介動画</p>
+          </div>
+        </div>
+
+        <!-- SNS自動化 -->
+        <div class="service-detail-block reverse">
+          <div class="service-detail-img-wrap">
+            <img
+              class="service-detail-img"
+              src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=800&auto=format&fit=crop&q=80"
+              alt="SNS自動化"
+              loading="lazy"
+            >
+          </div>
+          <div class="service-detail-body">
+            <p class="label">SNS AUTOMATION</p>
+            <h2>SNS自動化</h2>
+            <p>Twitter・Instagramの投稿・運用を自動化します。毎日の投稿作業から解放され、コア業務に集中できる環境を作ります。既に自動化の実績あり。導入後もサポートします。</p>
+            <p class="note">対応SNS：X（Twitter）、Instagram</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 料金 -->
+    <section style="background:#F5F0E8;">
+      <div class="section-inner">
+        <p class="section-label">Price</p>
+        <h2 class="section-title">料金について</h2>
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>サービス</th>
+              <th>料金の目安</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>AIコンサルティング</td><td>内容によりお見積り</td></tr>
+            <tr><td>LP制作</td><td>市場相場に準じた価格でご提案</td></tr>
+            <tr><td>チャットボット作成</td><td>内容によりお見積り</td></tr>
+            <tr><td>システム開発</td><td>内容によりお見積り</td></tr>
+            <tr><td>動画編集</td><td>内容によりお見積り</td></tr>
+            <tr><td>SNS自動化</td><td>内容によりお見積り</td></tr>
+            <tr><td>修正・変更（追加対応）</td><td>別途ご相談</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.85rem; color:#888; line-height:1.9;">
+          ※ 基本は成果報酬型。内容を確認した上でお見積りをご提示します。<br>
+          ※ ご要望によってはお受けできない場合もございます。
+        </p>
+      </div>
+    </section>
+
+    <div class="cta-banner">
+      <h2>まずは気軽にご相談ください</h2>
+      <p>初回面談は無料。どんな小さな悩みでも一緒に考えます。</p>
+      <a href="contact.html" class="btn btn-primary">お問い合わせ・相談する</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-logo">TAKAHIRO UEDA</div>
+    <nav class="footer-nav">
+      <a href="services.html">Services</a>
+      <a href="flow.html">Flow & Price</a>
+      <a href="profile.html">Profile</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="social-links">
+      <a href="https://www.instagram.com/ai_time_saver_lab" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://x.com/uepon__06" target="_blank" rel="noopener">X (Twitter)</a>
+      <a href="https://www.tiktok.com/@user7882321070544" target="_blank" rel="noopener">TikTok</a>
+    </div>
+    <p>© 2025 TAKAHIRO UEDA. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

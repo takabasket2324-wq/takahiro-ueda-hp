@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | TAKAHIRO UEDA</title>
+  <meta name="description" content="お問い合わせ・ご相談はこちら。初回面談は無料です。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="header-logo">TAKAHIRO <span>UEDA</span></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="flow.html">Flow & Price</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <div class="page-hero">
+      <p class="page-label">Contact</p>
+      <h1>お問い合わせ</h1>
+    </div>
+
+    <section>
+      <div class="section-inner">
+        <div class="contact-grid">
+
+          <!-- 左：案内 -->
+          <div class="contact-info">
+            <h2>まずはお気軽に<br>ご相談ください</h2>
+            <p>
+              「AIって何から始めれば？」という漠然とした疑問でも大歓迎です。
+              初回面談は無料で行っています。<br><br>
+              お問い合わせいただいてから、<strong>2営業日以内</strong>にご返信します。
+            </p>
+
+            <!-- メイン連絡先 -->
+            <div style="background:#F5F0E8; border-left:4px solid #C9A84C; border-radius:0 12px 12px 0; padding:20px 20px; margin-bottom:28px;">
+              <p style="font-size:0.75rem; font-weight:700; color:#C9A84C; letter-spacing:0.1em; margin-bottom:8px;">PRIMARY CONTACT</p>
+              <a href="mailto:takabasket24@outlook.jp" style="font-size:1rem; font-weight:700; color:#1B2A4A; word-break:break-all;">
+                📧 takabasket24@outlook.jp
+              </a>
+              <p style="font-size:0.8rem; color:#888; margin-top:6px;">ご連絡はメールにてお願いしております</p>
+            </div>
+
+            <!-- SNS（参考・実績紹介） -->
+            <div class="contact-sns">
+              <p style="font-size:0.85rem; font-weight:700; color:#1B2A4A; margin-bottom:12px;">SNSでは活用事例を公開中</p>
+              <a href="https://www.instagram.com/ai_time_saver_lab" target="_blank" rel="noopener">
+                <span class="sns-badge">Instagram</span>
+                <span>
+                  @ai_time_saver_lab
+                  <span style="display:block; font-size:0.75rem; color:#999;">AIを活用した自動投稿の実例を公開中</span>
+                </span>
+              </a>
+              <a href="https://x.com/uepon__06" target="_blank" rel="noopener">
+                <span class="sns-badge">X</span>
+                <span>
+                  @uepon__06
+                  <span style="display:block; font-size:0.75rem; color:#999;">スプレッドシート連携×AI生成で投稿する仕組みの実例</span>
+                </span>
+              </a>
+              <a href="https://www.tiktok.com/@user7882321070544" target="_blank" rel="noopener">
+                <span class="sns-badge">TikTok</span>
+                <span>
+                  @user7882321070544
+                  <span style="display:block; font-size:0.75rem; color:#999;">AIを使って制作した動画を公開中</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 右：フォーム -->
+          <div>
+            <form
+              action="https://formspree.io/f/mnjwjbrg"
+              method="POST"
+              id="contact-form"
+            >
+              <div class="form-group">
+                <label>お名前<span class="required">※必須</span></label>
+                <input type="text" name="name" placeholder="山田 太郎" required>
+              </div>
+
+              <div class="form-group">
+                <label>会社名・屋号<span style="font-size:0.75rem; color:#999; margin-left:8px;">任意</span></label>
+                <input type="text" name="company" placeholder="株式会社〇〇">
+              </div>
+
+              <div class="form-group">
+                <label>メールアドレス<span class="required">※必須</span></label>
+                <input type="email" name="email" placeholder="example@email.com" required>
+              </div>
+
+              <div class="form-group">
+                <label>ご相談内容<span class="required">※必須</span></label>
+                <select name="category" required>
+                  <option value="" disabled selected>選択してください</option>
+                  <option value="ai-consulting">AIコンサルティング</option>
+                  <option value="lp">LP制作</option>
+                  <option value="chatbot">チャットボット作成</option>
+                  <option value="system">システム開発</option>
+                  <option value="video">動画編集</option>
+                  <option value="sns">SNS自動化</option>
+                  <option value="other">その他・まだ決まっていない</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>詳細・ご要望<span class="required">※必須</span></label>
+                <textarea name="message" placeholder="どんな小さなことでも、気軽に書いてください。「まだ何も決まっていない」でも大丈夫です。" required></textarea>
+              </div>
+
+              <div class="form-privacy">
+                <input type="checkbox" id="privacy" name="privacy" required>
+                <label for="privacy">
+                  個人情報の取り扱いに同意します。入力いただいた情報はお問い合わせへの返信目的のみに使用し、第三者に提供することはありません。
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary form-submit">送信する</button>
+
+              <p id="form-success" style="display:none; margin-top:16px; color:#1B2A4A; font-weight:700; text-align:center;">
+                ✅ 送信が完了しました。2営業日以内にご返信します。
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-logo">TAKAHIRO UEDA</div>
+    <nav class="footer-nav">
+      <a href="services.html">Services</a>
+      <a href="flow.html">Flow & Price</a>
+      <a href="profile.html">Profile</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="social-links">
+      <a href="https://www.instagram.com/ai_time_saver_lab" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://x.com/uepon__06" target="_blank" rel="noopener">X (Twitter)</a>
+      <a href="https://www.tiktok.com/@user7882321070544" target="_blank" rel="noopener">TikTok</a>
+    </div>
+    <p>© 2025 TAKAHIRO UEDA. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
