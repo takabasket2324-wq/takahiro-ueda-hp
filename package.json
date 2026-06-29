@@ -1,0 +1,12 @@
+{
+  "name": "takahiro-ueda-hp",
+  "version": "1.0.0",
+  "description": "TAKAHIRO UEDA | AI Consultant の静的サイト",
+  "private": true,
+  "scripts": {
+    "dev": "live-server --port=5500 --no-browser=false --watch=. --ignore=node_modules,.git"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
