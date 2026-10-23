@@ -25,11 +25,10 @@ HTMLやCSSを保存すると、**自動でブラウザが更新**されます（
 
 | 編集したい内容 | ファイル |
 | --- | --- |
-| トップページ | `index.html` |
-| サービス紹介 | `services.html` |
-| 料金・流れ | `flow.html` |
+| トップページ（縦長1枚：数字・進め方・やらないこと・note・つくっている人） | `index.html` |
 | プロフィール | `profile.html` |
-| お問い合わせ | `contact.html` |
+| お問い合わせ（LINE・メール・X・フォーム） | `contact.html` |
+| 旧ページ（トップへ自動で移る案内だけ。古いリンク対策で残している） | `services.html`・`flow.html` |
 | 見た目・色・レイアウト | `css/style.css` |
 | 動き（メニュー等） | `js/main.js` |
 

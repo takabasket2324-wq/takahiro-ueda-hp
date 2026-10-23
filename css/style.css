@@ -1132,3 +1132,74 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 /* 数字カウント：3つ目が孤立せず中央に */
 .stats-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
 .stat { flex: 1 1 200px; max-width: 280px; }
+
+/* ============================================================
+   ===== 2026-10 作り直し（3ページ化）の追記 =====
+   色・フォントは既存の変数のまま。足したのは並びに要る分だけ。
+   ============================================================ */
+/* 固定ヘッダーの下にアンカー先が隠れないように */
+[id] { scroll-margin-top: 72px; }
+
+/* ① 最初の画面：ボタン下の一言 */
+.hero2-note { margin-top: 16px; font-size: 0.82rem; color: var(--color-text-light); }
+
+/* ② 数字：濃紺の帯の上に見出しと注記 */
+.stats { padding: 72px 40px; }
+.stats .section-label { text-align: center; }
+.stats .section-title { color: #fff; text-align: center; margin-bottom: 40px; }
+.stats-note {
+  max-width: 760px;
+  margin: 40px auto 0;
+  font-size: 0.8rem;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.65);
+}
+.stats-note a { color: var(--color-accent); text-decoration: underline; }
+
+/* ③ 3段：段の呼び名と費用の一言 */
+.step2-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: var(--color-sub);
+  color: var(--color-accent) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700;
+  line-height: 1.8 !important;
+}
+.steps2-price { text-align: center; font-size: 0.92rem; color: var(--color-main); font-weight: 700; }
+.steps2-row { margin-bottom: 32px; }
+
+/* ⑤ note：説明・新しい記事の一覧 */
+.note-lead { margin: -28px 0 36px; color: var(--color-text-light); font-size: 0.95rem; }
+.svc2-card .svc2-more { opacity: 1; transform: none; }
+.note-new-title { font-size: 1.05rem; font-weight: 700; color: var(--color-main); margin-bottom: 14px; }
+.note-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 40px; }
+.note-list a {
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 22px;
+  box-shadow: 0 2px 10px rgba(27,42,74,0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.note-list a:hover { transform: translateX(4px); box-shadow: 0 8px 22px rgba(27,42,74,0.08); }
+.note-date { font-family: var(--font-en); font-size: 0.78rem; color: var(--color-accent); white-space: nowrap; }
+.note-ttl { font-size: 0.9rem; color: var(--color-main); line-height: 1.7; }
+
+/* 引っ越し案内（services.html / flow.html） */
+.moved { min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.moved p { color: var(--color-text-light); margin-bottom: 28px; }
+
+@media (max-width: 768px) {
+  .stats { padding: 56px 20px; }
+  .note-list a { flex-direction: column; gap: 2px; padding: 14px 18px; }
+  .note-lead { margin-top: -32px; }
+}
+/* 最初の画面の見出し：スマホで「マップ」が途中で切れないように少しだけ小さく */
+@media (max-width: 480px) {
+  .hero2 .hero2-catch { font-size: 1.5rem; }
+}
