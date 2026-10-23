@@ -1203,3 +1203,9 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 @media (max-width: 480px) {
   .hero2 .hero2-catch { font-size: 1.5rem; }
 }
+
+/* 紹介動画（2026-10-23） */
+.movie { padding: 72px 24px; }
+.movie .section-label, .movie .section-title { text-align: center; }
+.movie-frame { max-width: 320px; margin: 24px auto 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.18); background:#0d1420; }
+.movie-frame video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; }
