@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TAKAHIRO UEDA | AI Consultant</title>
   <meta name="description" content="Googleマップの見え方を整えて、お店の手間を減らします。無料診断（LINE）→ Googleビジネスプロフィールの改善 → HP/LP・チャットボットの導入の3段。やらないことも先にお伝えします。">
+  <link rel="icon" href="data:,">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/story.css">
   <script>document.documentElement.classList.add('js');</script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEECL2GE5N"></script>
@@ -19,9 +21,9 @@
     gtag('config', 'G-TEECL2GE5N');
   </script>
 </head>
-<body>
+<body class="story-page">
 
-  <!-- ヘッダー -->
+  <!-- ヘッダー（今のトップと同じ） -->
   <header>
     <a href="index.html" class="header-logo">TAKAHIRO <span>UEDA</span></a>
     <nav id="nav">
@@ -37,265 +39,346 @@
     </button>
   </header>
 
+  <!-- 右の目次（PCの広い画面で、動きありの時だけ見える） -->
+  <div class="act-nav" role="navigation" aria-label="ページ内の目次">
+    <a href="#top" data-for="top"><span>Top</span></a>
+    <a href="#numbers" data-for="numbers"><span>Numbers</span></a>
+    <a href="#flow" data-for="flow"><span>Flow</span></a>
+    <a href="#dont" data-for="dont"><span>What I don't do</span></a>
+    <a href="#movie" data-for="movie"><span>Movie</span></a>
+    <a href="#note" data-for="note"><span>Note</span></a>
+    <a href="#profile" data-for="profile"><span>Profile</span></a>
+    <a href="#fin" data-for="fin"><span>LINE</span></a>
+  </div>
+
   <main>
 
-    <!-- ① 最初の画面 -->
-    <section class="hero2">
-      <div class="blob blob-a" aria-hidden="true"></div>
-      <div class="blob blob-b" aria-hidden="true"></div>
-      <div class="blob blob-c" aria-hidden="true"></div>
-      <div class="hero2-inner">
-        <p class="hero2-en">TAKAHIRO UEDA — AI Consultant</p>
-        <h1 class="hero2-catch" id="tw">
-          <span class="tw-line" data-text="Googleマップの">Googleマップの</span><br>
-          <span class="tw-line" data-text="見え方を整えて、">見え方を整えて、</span><br>
-          <em class="tw-line" data-text="お店の手間を減らします。">お店の手間を減らします。</em>
+    <!-- ========== 幕開け ========== -->
+    <section class="sh" id="top" data-act="top">
+      <div class="sh-glow" aria-hidden="true"></div>
+      <div class="sh-curtain" aria-hidden="true"><span class="sh-curtain-a"></span><span class="sh-curtain-b"></span><span class="sh-curtain-line"></span></div>
+      <div class="sh-inner">
+        <p class="sh-en">TAKAHIRO UEDA — AI Consultant</p>
+        <h1 class="sh-catch">
+          <span class="sh-line"><span>Googleマップの</span></span>
+          <span class="sh-line"><span>見え方を整えて、</span></span>
+          <span class="sh-line sh-line-gold"><span>お店の手間を減らします。</span></span>
         </h1>
-        <div class="hero2-after">
-          <p class="hero2-sub">
+        <div class="sh-after">
+          <p class="sh-sub">
             会社員として飲食店2店の運営に携わりながら、店で使う仕組みを自分でつくっています。<br>
             同じやり方で、お店のGoogleマップでの見え方と、HP・チャットボットなど手間が減る仕組みづくりをお手伝いします。
           </p>
-          <div class="hero-cta">
-            <a href="https://lin.ee/Vw6hCD5" target="_blank" rel="noopener" class="btn btn-dark">LINEで無料診断をはじめる</a>
-          </div>
-          <p class="hero2-note">店名を送るだけ。Googleでの見え方を29項目でチェックします。</p>
+          <a href="https://lin.ee/Vw6hCD5" target="_blank" rel="noopener" class="btn btn-primary">LINEで無料診断をはじめる</a>
+          <p class="sh-note">店名を送るだけ。Googleでの見え方を29項目でチェックします。</p>
         </div>
       </div>
-      <div class="scroll-cue" aria-hidden="true"><span></span>SCROLL</div>
+      <div class="sh-cue" aria-hidden="true"><span></span>SCROLL</div>
     </section>
 
-    <!-- 紹介動画 -->
-    <section class="movie" id="movie">
-      <div class="section-inner">
-        <p class="section-label reveal">Movie</p>
-        <h2 class="section-title reveal">30秒の紹介動画</h2>
-        <div class="movie-frame reveal">
+    <!-- ========== 第1幕：止まったまま場面が進む（見本のまま・確かめ役 合格済みの文） ========== -->
+    <section class="story" id="numbers" data-act="numbers" aria-label="第1幕 よくあるお店の手間から、運営に携わる店の数字まで">
+      <div class="story-stage" id="story-stage">
+
+        <!-- 場面1：よくある、お店の手間 -->
+        <div class="scene scene-1">
+          <div class="cap cap-1">
+            <p class="cap-label"><span>SCENE 01</span>よくある、お店の手間</p>
+            <h2 class="cap-title">Googleマップの<br>見え方が、<em>バラバラ。</em></h2>
+            <p class="cap-sub">どこから手をつければいいか、分からない。</p>
+          </div>
+        </div>
+
+        <!-- 場面2：情報を整える（散らばった札が1枚の店舗情報に収まる） -->
+        <div class="scene scene-2">
+          <div class="cap cap-2">
+            <p class="cap-label"><span>SCENE 02</span>情報を整える</p>
+            <h2 class="cap-title">情報を、<br><em>整える。</em></h2>
+            <p class="cap-sub">カテゴリ・写真・文章まで。</p>
+          </div>
+          <div class="card" aria-hidden="true">
+            <div class="card-frame">
+              <div class="card-head">
+                <span class="card-pin"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+                <span class="card-sk"><i class="sk-a"></i><i class="sk-b"></i></span>
+              </div>
+              <div class="card-photo"><i></i><i></i><i></i></div>
+            </div>
+            <ul class="chips">
+              <li class="chip" style="--ax:-6vw; --ay:-36vh; --ar:-14deg; --bx:8vw; --by:-30vh; --br:-12deg;"><span class="chip-q">?</span>カテゴリ<span class="chip-ok">✓</span></li>
+              <li class="chip" style="--ax:7vw; --ay:-28vh; --ar:12deg; --bx:-10vw; --by:-22vh; --br:9deg;"><span class="chip-q">?</span>写真<span class="chip-ok">✓</span></li>
+              <li class="chip" style="--ax:-8vw; --ay:18vh; --ar:10deg; --bx:14vw; --by:12vh; --br:8deg;"><span class="chip-q">?</span>文章<span class="chip-ok">✓</span></li>
+              <li class="chip" style="--ax:6vw; --ay:14vh; --ar:-12deg; --bx:-6vw; --by:6vh; --br:-10deg;"><span class="chip-q">?</span>29項目で診断<span class="chip-ok">✓</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 場面3：運営に携わる店の数字（口コミは声かけで増えた） -->
+        <div class="scene scene-3">
+          <div class="cap cap-3">
+            <p class="cap-label"><span>SCENE 03</span>運営に携わる店の数字</p>
+            <h2 class="cap-title">口コミは、<em>声かけで増えた。</em></h2>
+          </div>
+          <div class="nums">
+            <p class="nums-label">SUSHI KAGUYA の Google口コミ</p>
+            <p class="nums-big"><span class="sr-only">160件から207件</span><span class="nums-val" id="nums-val" aria-hidden="true">207</span><small aria-hidden="true">件</small></p>
+            <!-- 記録にある2点だけ（10/1 管理画面の160件・10/22 公開マップの207件）。間の日付は作らない。棒は0から -->
+            <div class="nums-bars" aria-hidden="true">
+              <div class="nb-row">
+                <span class="nb-date">10/1</span>
+                <span class="nb-track"><span class="nb-base" style="--w:77.3%"></span></span>
+                <span class="nb-val">160</span>
+              </div>
+              <div class="nb-row is-now">
+                <span class="nb-date">10/22</span>
+                <span class="nb-track"><span class="nb-base" style="--w:77.3%"></span><span class="nb-grow" style="--l:77.3%; --w:22.7%"></span></span>
+                <span class="nb-val">207</span>
+              </div>
+            </div>
+            <div class="nums-row">
+              <p class="nums-diff"><b>+47</b>件／3週間</p>
+              <p class="nums-star">
+                <span class="ns-stars" aria-hidden="true">
+                  <svg class="ns-base" viewBox="0 0 120 22" focusable="false"><use href="#stars5"/></svg>
+                  <span class="ns-fill"><svg viewBox="0 0 120 22" focusable="false"><use href="#stars5"/></svg></span>
+                </span>
+                <b>4.8</b><span class="ns-cap">Googleの評価</span>
+              </p>
+            </div>
+            <p class="nums-note">買った口コミは0件です。同じ数字はお約束できません。</p>
+          </div>
+        </div>
+
+        <!-- 場面の目盛り -->
+        <ol class="ticks" aria-hidden="true">
+          <li class="tick" data-i="0">01</li>
+          <li class="tick" data-i="1">02</li>
+          <li class="tick" data-i="2">03</li>
+        </ol>
+        <div class="stage-bar" aria-hidden="true"><span id="stage-bar"></span></div>
+      </div>
+    </section>
+
+    <!-- 数字の注記（今のトップの注記と同じ文） -->
+    <section class="story-src">
+      <p>
+        SUSHI KAGUYA は、私が運営に携わる大阪・心斎橋の手巻き寿司店です。口コミと評価は、2026年10月22日に公開のGoogleマップで確認した数字です（10月1日に店の管理画面で見た160件から、3週間で47件増えました）。
+        口コミはお客さんへの声かけで集めていて、買った口コミは0件です。店全体の取り組みの結果で、同じ数字をお約束するものではありません。
+        <a href="https://sushikaguya.com" target="_blank" rel="noopener">sushikaguya.com</a>
+      </p>
+    </section>
+
+    <!-- 仕組みの導入実績（今のトップの3つ目の数字。口コミの話・3段の話とは切り離して置く） -->
+    <section class="works" id="works" data-act="numbers">
+      <div class="works-inner">
+        <p class="works-label fx">仕組みの導入実績（社名は非公開）</p>
+        <p class="works-big fx"><span class="sr-only">2社</span><span class="works-val" aria-hidden="true">2</span><small aria-hidden="true">社</small></p>
+        <ul class="works-list">
+          <li class="wk wk-a"><span class="wk-mark" aria-hidden="true">A</span>A社：シフトの自動作成</li>
+          <li class="wk wk-b"><span class="wk-mark" aria-hidden="true">B</span>B社：公式LINEの導線づくり</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== 第2幕：進め方は3段（線が伸びて、1→2→3が順に灯る） ========== -->
+    <section class="flow" id="flow" data-act="flow">
+      <div class="flow-inner">
+        <div class="flow-head">
+          <div class="act-head">
+            <span class="act-big" aria-hidden="true">02</span>
+            <p class="act-no"><span>ACT 02</span>Flow</p>
+            <h2 class="act-title"><span class="al"><span>進め方は3段です</span></span></h2>
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="flow-track" id="flow-track">
+          <span class="flow-rail" aria-hidden="true"><span class="flow-fill"></span></span>
+          <ol class="flow-steps">
+            <li class="fstep">
+              <div class="fstep-num" aria-hidden="true">1</div>
+              <div class="fstep-body">
+                <p class="fstep-tag">0円</p>
+                <h3>無料診断</h3>
+                <p>LINEで「診断 ○○店」と店名を送るだけ。GoogleマップとGoogle検索での見え方を29項目でチェックして、結果をお返しします。</p>
+              </div>
+            </li>
+            <li class="fstep">
+              <div class="fstep-num" aria-hidden="true">2</div>
+              <div class="fstep-body">
+                <p class="fstep-tag">Googleの店舗情報</p>
+                <h3>改善代行</h3>
+                <p>Googleビジネスプロフィールを、近くのお店の調べからカテゴリ・写真・文章まで整えます。30日後にもう一度診断して、変わったところを確かめます。</p>
+              </div>
+            </li>
+            <li class="fstep">
+              <div class="fstep-num" aria-hidden="true">3</div>
+              <div class="fstep-body">
+                <p class="fstep-tag">必要なものだけ</p>
+                <h3>仕組みの導入</h3>
+                <p>お店のHP・LPの制作と、よくある質問に自動で答えるチャットボット（Dify）の導入。チャットボットで予約の受付はできません。</p>
+              </div>
+            </li>
+          </ol>
+          </div>
+          <p class="flow-price fx">費用は、無料診断のあとに内容を見てお見積りします。初回の相談は無料です。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 第3幕：先にお伝えする、やらないこと（約束を1枚ずつ重ねる） ========== -->
+    <section class="dont" id="dont" data-act="dont">
+      <div class="dont-inner">
+        <div class="act-head act-head-dark">
+          <span class="act-big" aria-hidden="true">03</span>
+          <p class="act-no"><span>ACT 03</span>What I don't do</p>
+          <h2 class="act-title"><span class="al"><span>先にお伝えする、</span></span><span class="al"><span>やらないこと</span></span></h2>
+        </div>
+        <ol class="vows" id="vows">
+          <li class="vow" style="--i:0">
+            <div class="vow-seal" aria-hidden="true"><svg viewBox="0 0 84 84" focusable="false"><circle class="vs-ring" cx="42" cy="42" r="38"/><circle class="vs-dot" cx="42" cy="42" r="31"/></svg><span>01</span></div>
+            <div class="vow-body">
+              <h3>検索の順位や集客は、保証しません</h3>
+              <p>こちらでできるのは、お店の情報を整えるところまでです。順位や来店数は、お約束しません。</p>
+            </div>
+          </li>
+          <li class="vow" style="--i:1">
+            <div class="vow-seal" aria-hidden="true"><svg viewBox="0 0 84 84" focusable="false"><circle class="vs-ring" cx="42" cy="42" r="38"/><circle class="vs-dot" cx="42" cy="42" r="31"/></svg><span>02</span></div>
+            <div class="vow-body">
+              <h3>口コミへの返信は、自動にしません</h3>
+              <p>返信は、お店の言葉で書くものだと考えているからです。</p>
+            </div>
+          </li>
+          <li class="vow" style="--i:2">
+            <div class="vow-seal" aria-hidden="true"><svg viewBox="0 0 84 84" focusable="false"><circle class="vs-ring" cx="42" cy="42" r="38"/><circle class="vs-dot" cx="42" cy="42" r="31"/></svg><span>03</span></div>
+            <div class="vow-body">
+              <h3>送信・公開は、お店が決めます</h3>
+              <p>文面や設定の準備はこちらでしても、送る・公開する前には必ずご依頼のお店に確かめていただきます。</p>
+            </div>
+          </li>
+          <li class="vow" style="--i:3">
+            <div class="vow-seal" aria-hidden="true"><svg viewBox="0 0 84 84" focusable="false"><circle class="vs-ring" cx="42" cy="42" r="38"/><circle class="vs-dot" cx="42" cy="42" r="31"/></svg><span>04</span></div>
+            <div class="vow-body">
+              <h3>お渡ししたあとは、お店のお客さんのリストを見られません</h3>
+              <p>アカウントは最初からご依頼のお店のものを使います。納品したあと、私の方からお店のお客さんのリストは一切見られません。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== 幕間：紹介動画（明かりが落ちて、画面だけが浮かぶ。自動では再生しない） ========== -->
+    <section class="inter" id="movie" data-act="movie">
+      <div class="inter-light" aria-hidden="true"></div>
+      <div class="inter-inner">
+        <p class="inter-en fx">INTERMISSION</p>
+        <p class="act-no act-no-center fx"><span>Movie</span></p>
+        <h2 class="inter-title fx">30秒の紹介動画</h2>
+        <div class="inter-screen">
           <video src="video/intro_v4.mp4" poster="video/intro_v4_poster.jpg" controls playsinline preload="none" width="1080" height="1920"></video>
         </div>
       </div>
     </section>
 
-    <!-- ② いま動いている数字 -->
-    <section class="stats" id="numbers">
-      <div class="section-inner">
-        <p class="section-label reveal">Numbers</p>
-        <h2 class="section-title reveal">いま動いている数字</h2>
-        <div class="stats-row" id="stats-row">
-          <div class="stat reveal">
-            <div class="stat-num"><span class="sr-only">207件</span><span data-count="207" aria-hidden="true">207</span><small aria-hidden="true">件</small></div>
-            <p>SUSHI KAGUYA の<br>Google口コミ</p>
-            <!-- 記録にある2点だけ（10/1 管理画面の160件・10/22 公開マップの207件）。間の点は作らない。棒は0から -->
-            <div class="viz-bars" aria-hidden="true">
-              <div class="vb-row">
-                <span class="vb-date">10/1</span>
-                <span class="vb-track"><span class="vb-base" style="--w:77.3%"></span></span>
-                <span class="vb-val">160</span>
-              </div>
-              <div class="vb-row is-now">
-                <span class="vb-date">10/22</span>
-                <span class="vb-track"><span class="vb-base" style="--w:77.3%"></span><span class="vb-grow" style="--l:77.3%; --w:22.7%"></span></span>
-                <span class="vb-val">207</span>
-              </div>
-              <p class="vb-diff"><b>+47</b>件／3週間</p>
-            </div>
-          </div>
-          <div class="stat reveal">
-            <div class="stat-num"><span class="sr-only">4.8</span><span data-count="4.8" data-decimals="1" aria-hidden="true">4.8</span></div>
-            <p>SUSHI KAGUYA の<br>Googleの評価</p>
-            <!-- 星5つのうち 4.8 ぶん（4つと5つ目の8割）を塗る -->
-            <div class="viz-stars" aria-hidden="true">
-              <svg class="vs-base" viewBox="0 0 120 22" focusable="false"><use href="#stars5"/></svg>
-              <span class="vs-fill" style="--w:95.6%"><svg viewBox="0 0 120 22" focusable="false"><use href="#stars5"/></svg></span>
-            </div>
-          </div>
-          <div class="stat reveal">
-            <div class="stat-num"><span class="sr-only">2社</span><span data-count="2" aria-hidden="true">2</span><small aria-hidden="true">社</small></div>
-            <p>仕組みの導入実績（社名は非公開）</p>
-            <ul class="viz-chips">
-              <li><span class="vc-mark" aria-hidden="true">A</span>A社：シフトの自動作成</li>
-              <li><span class="vc-mark" aria-hidden="true">B</span>B社：公式LINEの導線づくり</li>
-            </ul>
-          </div>
+    <!-- ========== 第4幕：実録は、noteに書いています ========== -->
+    <section class="notes" id="note" data-act="note">
+      <div class="notes-inner">
+        <div class="act-head">
+          <span class="act-big" aria-hidden="true">04</span>
+          <p class="act-no"><span>ACT 04</span>Note</p>
+          <h2 class="act-title"><span class="al"><span>実録は、</span></span><span class="al"><span>noteに書いています</span></span></h2>
         </div>
-        <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-          <defs>
-            <g id="stars5">
-              <path d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
-              <path transform="translate(24.5 0)" d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
-              <path transform="translate(49 0)" d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
-              <path transform="translate(73.5 0)" d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
-              <path transform="translate(98 0)" d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
-            </g>
-          </defs>
-        </svg>
-        <p class="stats-note reveal">
-          SUSHI KAGUYA は、私が運営に携わる大阪・心斎橋の手巻き寿司店です。口コミと評価は、2026年10月22日に公開のGoogleマップで確認した数字です（10月1日に店の管理画面で見た160件から、3週間で47件増えました）。
-          口コミはお客さんへの声かけで集めていて、買った口コミは0件です。店全体の取り組みの結果で、同じ数字をお約束するものではありません。
-          <a href="https://sushikaguya.com" target="_blank" rel="noopener">sushikaguya.com</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- ③ 進め方は3段 -->
-    <section class="steps2" id="flow">
-      <div class="section-inner">
-        <p class="section-label reveal">Flow</p>
-        <h2 class="section-title reveal">進め方は3段です</h2>
-        <div class="steps2-row" id="steps2-row">
-          <div class="step2">
-            <div class="step2-num">1</div>
-            <p class="step2-tag">0円</p>
-            <h3>無料診断</h3>
-            <p>LINEで「診断 ○○店」と店名を送るだけ。GoogleマップとGoogle検索での見え方を29項目でチェックして、結果をお返しします。</p>
-          </div>
-          <div class="step2-arrow" aria-hidden="true"><span class="step2-line"></span></div>
-          <div class="step2">
-            <div class="step2-num">2</div>
-            <p class="step2-tag">Googleの店舗情報</p>
-            <h3>改善代行</h3>
-            <p>Googleビジネスプロフィールを、近くのお店の調べからカテゴリ・写真・文章まで整えます。30日後にもう一度診断して、変わったところを確かめます。</p>
-          </div>
-          <div class="step2-arrow" aria-hidden="true"><span class="step2-line"></span></div>
-          <div class="step2">
-            <div class="step2-num">3</div>
-            <p class="step2-tag">必要なものだけ</p>
-            <h3>仕組みの導入</h3>
-            <p>お店のHP・LPの制作と、よくある質問に自動で答えるチャットボット（Dify）の導入。チャットボットで予約の受付はできません。</p>
-          </div>
-        </div>
-        <p class="steps2-price reveal">費用は、無料診断のあとに内容を見てお見積りします。初回の相談は無料です。</p>
-      </div>
-    </section>
-
-    <!-- ④ やらないこと -->
-    <section class="reasons" id="dont">
-      <div class="section-inner">
-        <p class="section-label reveal">What I don't do</p>
-        <h2 class="section-title reveal">先にお伝えする、やらないこと</h2>
-        <div class="reason-list">
-          <div class="reason-item reveal">
-            <div class="reason-num" aria-hidden="true">01</div>
-            <div>
-              <h3>検索の順位や集客は、保証しません</h3>
-              <p>こちらでできるのは、お店の情報を整えるところまでです。順位や来店数は、お約束しません。</p>
-            </div>
-          </div>
-          <div class="reason-item reveal">
-            <div class="reason-num" aria-hidden="true">02</div>
-            <div>
-              <h3>口コミへの返信は、自動にしません</h3>
-              <p>返信は、お店の言葉で書くものだと考えているからです。</p>
-            </div>
-          </div>
-          <div class="reason-item reveal">
-            <div class="reason-num" aria-hidden="true">03</div>
-            <div>
-              <h3>送信・公開は、お店が決めます</h3>
-              <p>文面や設定の準備はこちらでしても、送る・公開する前には必ずご依頼のお店に確かめていただきます。</p>
-            </div>
-          </div>
-          <div class="reason-item reveal">
-            <div class="reason-num" aria-hidden="true">04</div>
-            <div>
-              <h3>お渡ししたあとは、お店のお客さんのリストを見られません</h3>
-              <p>アカウントは最初からご依頼のお店のものを使います。納品したあと、私の方からお店のお客さんのリストは一切見られません。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ⑤ 実録（note） -->
-    <section class="svc2" id="note">
-      <div class="section-inner">
-        <p class="section-label reveal">Note</p>
-        <h2 class="section-title reveal">実録は、noteに書いています</h2>
-        <p class="note-lead reveal">店で試してうまくいったことも、やめたことも、実際にあったことをそのまま書いています。</p>
-        <div class="svc2-cards">
-          <a href="https://note.com/lively_fox2840/m/m38986aa90ad0" target="_blank" rel="noopener" class="svc2-card reveal">
-            <div class="icon" aria-hidden="true">🍣</div>
+        <p class="notes-lead fx">店で試してうまくいったことも、やめたことも、実際にあったことをそのまま書いています。</p>
+        <div class="ncards">
+          <a href="https://note.com/lively_fox2840/m/m38986aa90ad0" target="_blank" rel="noopener" class="ncard fx">
+            <div class="ncard-icon" aria-hidden="true">🍣</div>
             <h3>連載「8席の寿司屋を、AIで建て直す」</h3>
             <p>SUSHI KAGUYA で何を試したか。数字と一緒に書いている店の実録です。</p>
-            <span class="svc2-more" aria-hidden="true">マガジンを見る →</span>
+            <span class="ncard-more" aria-hidden="true">マガジンを見る →</span>
           </a>
-          <a href="https://note.com/lively_fox2840/m/mca468d526151" target="_blank" rel="noopener" class="svc2-card reveal">
-            <div class="icon" aria-hidden="true">🤖</div>
+          <a href="https://note.com/lively_fox2840/m/mca468d526151" target="_blank" rel="noopener" class="ncard fx">
+            <div class="ncard-icon" aria-hidden="true">🤖</div>
             <h3>「AI会社を、ひとりで回す」</h3>
             <p>自動で動く仕組みと人間1人で、仕事をどう分けて回しているか。失敗も含めた実録です。</p>
-            <span class="svc2-more" aria-hidden="true">マガジンを見る →</span>
+            <span class="ncard-more" aria-hidden="true">マガジンを見る →</span>
           </a>
-          <a href="https://note.com/lively_fox2840/m/m20a2719309b1" target="_blank" rel="noopener" class="svc2-card reveal">
-            <div class="icon" aria-hidden="true">🛡️</div>
+          <a href="https://note.com/lively_fox2840/m/m20a2719309b1" target="_blank" rel="noopener" class="ncard fx">
+            <div class="ncard-icon" aria-hidden="true">🛡️</div>
             <h3>「小さなお店のAIと守り方」</h3>
             <p>集客・口コミ・セキュリティなど、小さなお店向けの実用編です。</p>
-            <span class="svc2-more" aria-hidden="true">マガジンを見る →</span>
+            <span class="ncard-more" aria-hidden="true">マガジンを見る →</span>
           </a>
         </div>
 
-        <h3 class="note-new-title reveal">新しい記事</h3>
-        <ul class="note-list">
-          <li class="reveal">
+        <h3 class="nnew-title fx">新しい記事</h3>
+        <ul class="nlist">
+          <li class="fx fx-side">
             <a href="https://note.com/lively_fox2840/n/n965151367234" target="_blank" rel="noopener">
-              <span class="note-date">2026.10.22</span>
-              <span class="note-ttl">飲食店の紹介記事の間違いは翌日に直った。同じ間違いが店のサイトに4言語あった</span>
+              <span class="nlist-date">2026.10.22</span>
+              <span class="nlist-ttl">飲食店の紹介記事の間違いは翌日に直った。同じ間違いが店のサイトに4言語あった</span>
             </a>
           </li>
-          <li class="reveal">
+          <li class="fx fx-side">
             <a href="https://note.com/lively_fox2840/n/n2ba5b5313289" target="_blank" rel="noopener">
-              <span class="note-date">2026.10.20</span>
-              <span class="note-ttl">AIの比較で「3割安い」と出た食材が、実は2%高かった。「今の値段」が古かった</span>
+              <span class="nlist-date">2026.10.20</span>
+              <span class="nlist-ttl">AIの比較で「3割安い」と出た食材が、実は2%高かった。「今の値段」が古かった</span>
             </a>
           </li>
-          <li class="reveal">
+          <li class="fx fx-side">
             <a href="https://note.com/lively_fox2840/n/n55388a486044" target="_blank" rel="noopener">
-              <span class="note-date">2026.10.19</span>
-              <span class="note-ttl">AI社員の画面は、読み元で決まる。1枚で見たくて2日で5版作って分かった</span>
+              <span class="nlist-date">2026.10.19</span>
+              <span class="nlist-ttl">AI社員の画面は、読み元で決まる。1枚で見たくて2日で5版作って分かった</span>
             </a>
           </li>
         </ul>
-        <div style="text-align:center;">
-          <a href="https://note.com/lively_fox2840" target="_blank" rel="noopener" class="btn btn-dark reveal">noteをすべて見る</a>
+        <div class="notes-more">
+          <a href="https://note.com/lively_fox2840" target="_blank" rel="noopener" class="btn btn-dark fx">noteをすべて見る</a>
         </div>
       </div>
     </section>
 
-    <!-- ⑥ つくっている人 -->
-    <section class="prof2">
-      <div class="section-inner">
-        <p class="section-label reveal">Profile</p>
-        <h2 class="section-title reveal">つくっている人</h2>
-        <div class="prof2-grid">
-          <div class="reveal" style="display:flex; flex-direction:column; align-items:center; gap:14px;">
-            <img src="images/ueda_icon_apron.jpg" alt="店の現場に立つ上田貴大" loading="lazy"
-              style="width:min(280px, 70vw); aspect-ratio:1/1; border-radius:50%; object-fit:cover; display:block; box-shadow:0 8px 32px rgba(30,41,82,0.18); border:4px solid #fff;">
-            <p class="prof2-caption">運営に携わる店の現場にも立っています</p>
+    <!-- つくっている人 -->
+    <section class="maker" id="profile" data-act="profile">
+      <div class="maker-head">
+        <p class="act-no act-no-center fx"><span>Profile</span></p>
+        <h2 class="maker-title fx">つくっている人</h2>
+      </div>
+      <div class="maker-inner">
+        <div class="maker-photo fx">
+          <div class="maker-ring">
+            <svg class="mr-svg" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="48.5"/></svg>
+            <img src="images/ueda_icon_apron.jpg" alt="店の現場に立つ上田貴大" loading="lazy" width="280" height="280">
           </div>
-          <div class="prof2-body reveal">
-            <p class="prof2-en">TAKAHIRO UEDA</p>
-            <h3>上田 貴大</h3>
-            <p class="prof2-role">AI Consultant｜大阪</p>
-            <p class="prof2-bio">
-              通信業界の営業を経て、いまは会社員として飲食店2店の運営に携わっています。
-              店で要る仕組みは、プログラミング未経験から、AIを道具にして自作してきました。
-              人と話すのが得意です。お店の話から、気軽にどうぞ。
-            </p>
-            <a href="profile.html" class="btn btn-outline-dark">プロフィールを見る</a>
-          </div>
+          <p class="maker-caption">運営に携わる店の現場にも立っています</p>
+        </div>
+        <div class="maker-body">
+          <p class="maker-en fx">TAKAHIRO UEDA</p>
+          <h3 class="maker-name fx">上田 貴大</h3>
+          <p class="maker-role fx">AI Consultant｜大阪</p>
+          <p class="maker-bio fx">
+            通信業界の営業を経て、いまは会社員として飲食店2店の運営に携わっています。
+            店で要る仕組みは、プログラミング未経験から、AIを道具にして自作してきました。
+            人と話すのが得意です。お店の話から、気軽にどうぞ。
+          </p>
+          <a href="profile.html" class="btn btn-outline-dark fx">プロフィールを見る</a>
         </div>
       </div>
     </section>
 
-    <!-- 締め -->
-    <div class="cta-banner">
-      <h2 class="reveal">まずは、無料診断から</h2>
-      <p class="reveal">LINEで店名を送るだけ。診断も、その後の初回の相談も無料です。</p>
-      <a href="https://lin.ee/Vw6hCD5" target="_blank" rel="noopener" class="btn btn-primary reveal">LINEで無料診断をはじめる</a>
-    </div>
+    <!-- ========== 終幕：まずは、無料診断から ========== -->
+    <section class="fin" id="fin" data-act="fin">
+      <div class="fin-glow" aria-hidden="true"></div>
+      <div class="fin-inner">
+        <p class="fin-en">FINALE</p>
+        <h2 class="fin-title"><span class="al"><span>まずは、</span></span><span class="al"><span>無料診断から</span></span></h2>
+        <span class="fin-rule" aria-hidden="true"></span>
+        <p class="fin-lead">LINEで店名を送るだけ。診断も、その後の初回の相談も無料です。</p>
+        <a href="https://lin.ee/Vw6hCD5" target="_blank" rel="noopener" class="btn btn-primary fin-btn">LINEで無料診断をはじめる</a>
+      </div>
+    </section>
 
   </main>
 
-  <!-- フッター -->
+  <!-- フッター（今のトップと同じ） -->
   <footer>
     <div class="footer-logo">TAKAHIRO UEDA</div>
     <nav class="footer-nav">
@@ -311,6 +394,20 @@
     <p>© 2026 TAKAHIRO UEDA. All rights reserved.</p>
   </footer>
 
+  <!-- 星5つ（今のトップと同じ形） -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="stars5">
+        <path d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
+        <path transform="translate(24.5 0)" d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
+        <path transform="translate(49 0)" d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
+        <path transform="translate(73.5 0)" d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
+        <path transform="translate(98 0)" d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
+      </g>
+    </defs>
+  </svg>
+
   <script src="js/main.js"></script>
+  <script src="js/story.js"></script>
 </body>
 </html>
