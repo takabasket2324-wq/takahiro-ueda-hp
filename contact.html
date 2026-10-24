@@ -15,6 +15,8 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    // 手元の確認画面（localhost など）では数えない（2026-10-24）
+    if (location.protocol === 'file:' || /^(localhost|127\.0\.0\.1|\[::1\]|.*\.localhost)$/.test(location.hostname)) window['ga-disable-G-TEECL2GE5N'] = true;
     gtag('config', 'G-TEECL2GE5N');
   </script>
 </head>
