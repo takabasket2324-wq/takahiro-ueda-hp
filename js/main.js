@@ -2,8 +2,24 @@
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('nav');
 if (hamburger && nav) {
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('open');
+  hamburger.setAttribute('aria-controls', 'nav');
+  hamburger.setAttribute('aria-expanded', 'false');
+  const setOpen = (open) => {
+    nav.classList.toggle('open', open);
+    document.body.classList.toggle('nav-open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+  };
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    setOpen(!nav.classList.contains('open'));
+  });
+  // リンクを押した・Esc・メニューの外を押した、で閉じる
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) { setOpen(false); hamburger.focus(); }
+  });
+  document.addEventListener('click', (e) => {
+    if (nav.classList.contains('open') && !nav.contains(e.target)) setOpen(false);
   });
 }
 
