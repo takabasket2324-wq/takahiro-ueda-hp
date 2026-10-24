@@ -81,20 +81,54 @@
       <div class="section-inner">
         <p class="section-label reveal">Numbers</p>
         <h2 class="section-title reveal">いま動いている数字</h2>
-        <div class="stats-row">
+        <div class="stats-row" id="stats-row">
           <div class="stat reveal">
-            <div class="stat-num"><span data-count="207">207</span><small>件</small></div>
+            <div class="stat-num"><span class="sr-only">207件</span><span data-count="207" aria-hidden="true">207</span><small aria-hidden="true">件</small></div>
             <p>SUSHI KAGUYA の<br>Google口コミ</p>
+            <!-- 記録にある2点だけ（10/1 管理画面の160件・10/22 公開マップの207件）。間の点は作らない。棒は0から -->
+            <div class="viz-bars" aria-hidden="true">
+              <div class="vb-row">
+                <span class="vb-date">10/1</span>
+                <span class="vb-track"><span class="vb-base" style="--w:77.3%"></span></span>
+                <span class="vb-val">160</span>
+              </div>
+              <div class="vb-row is-now">
+                <span class="vb-date">10/22</span>
+                <span class="vb-track"><span class="vb-base" style="--w:77.3%"></span><span class="vb-grow" style="--l:77.3%; --w:22.7%"></span></span>
+                <span class="vb-val">207</span>
+              </div>
+              <p class="vb-diff"><b>+47</b>件／3週間</p>
+            </div>
           </div>
           <div class="stat reveal">
-            <div class="stat-num">4.8</div>
+            <div class="stat-num"><span class="sr-only">4.8</span><span data-count="4.8" data-decimals="1" aria-hidden="true">4.8</span></div>
             <p>SUSHI KAGUYA の<br>Googleの評価</p>
+            <!-- 星5つのうち 4.8 ぶん（4つと5つ目の8割）を塗る -->
+            <div class="viz-stars" aria-hidden="true">
+              <svg class="vs-base" viewBox="0 0 120 22" focusable="false"><use href="#stars5"/></svg>
+              <span class="vs-fill" style="--w:95.6%"><svg viewBox="0 0 120 22" focusable="false"><use href="#stars5"/></svg></span>
+            </div>
           </div>
           <div class="stat reveal">
-            <div class="stat-num"><span data-count="2">2</span><small>社</small></div>
-            <p>仕組みの導入実績（社名は非公開）<br>A社：シフトの自動作成<br>B社：公式LINEの導線づくり</p>
+            <div class="stat-num"><span class="sr-only">2社</span><span data-count="2" aria-hidden="true">2</span><small aria-hidden="true">社</small></div>
+            <p>仕組みの導入実績（社名は非公開）</p>
+            <ul class="viz-chips">
+              <li><span class="vc-mark" aria-hidden="true">A</span>A社：シフトの自動作成</li>
+              <li><span class="vc-mark" aria-hidden="true">B</span>B社：公式LINEの導線づくり</li>
+            </ul>
           </div>
         </div>
+        <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+          <defs>
+            <g id="stars5">
+              <path d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
+              <path transform="translate(24.5 0)" d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
+              <path transform="translate(49 0)" d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
+              <path transform="translate(73.5 0)" d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
+              <path transform="translate(98 0)" d="M11 1.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L11 16.4l-5.9 3.1 1.2-6.5L1.5 8.4l6.6-.9z"/>
+            </g>
+          </defs>
+        </svg>
         <p class="stats-note reveal">
           SUSHI KAGUYA は、私が運営に携わる大阪・心斎橋の手巻き寿司店です。口コミと評価は、2026年10月22日に公開のGoogleマップで確認した数字です（10月1日に店の管理画面で見た160件から、3週間で47件増えました）。
           口コミはお客さんへの声かけで集めていて、買った口コミは0件です。店全体の取り組みの結果で、同じ数字をお約束するものではありません。
@@ -108,22 +142,22 @@
       <div class="section-inner">
         <p class="section-label reveal">Flow</p>
         <h2 class="section-title reveal">進め方は3段です</h2>
-        <div class="steps2-row">
-          <div class="step2 reveal">
+        <div class="steps2-row" id="steps2-row">
+          <div class="step2">
             <div class="step2-num">1</div>
             <p class="step2-tag">0円</p>
             <h3>無料診断</h3>
             <p>LINEで「診断 ○○店」と店名を送るだけ。GoogleマップとGoogle検索での見え方を29項目でチェックして、結果をお返しします。</p>
           </div>
-          <div class="step2-arrow reveal" aria-hidden="true">→</div>
-          <div class="step2 reveal">
+          <div class="step2-arrow" aria-hidden="true"><span class="step2-line"></span></div>
+          <div class="step2">
             <div class="step2-num">2</div>
             <p class="step2-tag">Googleの店舗情報</p>
             <h3>改善代行</h3>
             <p>Googleビジネスプロフィールを、近くのお店の調べからカテゴリ・写真・文章まで整えます。30日後にもう一度診断して、変わったところを確かめます。</p>
           </div>
-          <div class="step2-arrow reveal" aria-hidden="true">→</div>
-          <div class="step2 reveal">
+          <div class="step2-arrow" aria-hidden="true"><span class="step2-line"></span></div>
+          <div class="step2">
             <div class="step2-num">3</div>
             <p class="step2-tag">必要なものだけ</p>
             <h3>仕組みの導入</h3>

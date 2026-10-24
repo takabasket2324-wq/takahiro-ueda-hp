@@ -33,6 +33,15 @@ if (form) {
   });
 }
 
+/* ヘッダー：少し下に動いたら影を付ける（全ページ共通） */
+(function () {
+  const header = document.querySelector('header');
+  if (!header) return;
+  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
 /* ============================================================
    ===== トップページ v2 演出（2026-08 リニューアル）=====
    ヒーローが無いページでは何もしない（他ページ共有のため）
@@ -109,37 +118,80 @@ if (form) {
         }
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => io.observe(el));
+    reveals.forEach(el => {
+      io.observe(el);
+      // 出終わったら出現用のクラスを外す（カードのホバーの浮きが効くように）
+      el.addEventListener('transitionend', function done(e) {
+        if (e.target !== el || e.propertyName !== 'opacity' || !el.classList.contains('is-visible')) return;
+        el.removeEventListener('transitionend', done);
+        el.classList.remove('reveal', 'is-visible');
+        el.style.removeProperty('--rd');
+      });
+    });
   } else {
     reveals.forEach(el => el.classList.add('is-visible'));
   }
 
-  /* --- 3. 数字カウントアップ --- */
-  const counters = document.querySelectorAll('[data-count]');
+  /* --- 3. 数字カウントアップ（小数も）＋ 数字の図（棒・星・A社B社） --- */
+  const counters = Array.from(document.querySelectorAll('[data-count]'));
+  const fmt = (v, d) => (d ? v.toFixed(d) : String(Math.round(v)));
   function animateCount(el) {
-    const target = parseInt(el.dataset.count, 10) || 0;
-    const dur = 1300;
+    const target = parseFloat(el.dataset.count) || 0;
+    const d = parseInt(el.dataset.decimals || '0', 10);
+    // 桁が増えても横にずれないよう、完成形の幅で先に固定してから数え始める
+    el.textContent = fmt(target, d);
+    el.style.display = 'inline-block';
+    el.style.minWidth = el.getBoundingClientRect().width + 'px';
+    el.textContent = fmt(0, d);
+    const dur = 1600;
     const start = performance.now();
     function tick(now) {
       const p = Math.min((now - start) / dur, 1);
       const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
-      el.textContent = Math.round(target * eased);
+      el.textContent = fmt(p < 1 ? target * eased : target, d);
       if (p < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
   }
+  const statCards = Array.from(document.querySelectorAll('.stats-row .stat'));
   if ('IntersectionObserver' in window && !reduced) {
-    const cio = new IntersectionObserver((entries) => {
+    // 見える前は 0 を出しておく（数え始めに 0 → 完成形へ）
+    counters.forEach(el => { el.textContent = fmt(0, parseInt(el.dataset.decimals || '0', 10)); });
+    const sio = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCount(entry.target);
-          cio.unobserve(entry.target);
-        }
+        if (!entry.isIntersecting) return;
+        const card = entry.target;
+        sio.unobserve(card);
+        card.classList.add('is-in');
+        const c = card.querySelector('[data-count]');
+        if (c) setTimeout(() => animateCount(c), 120);
       });
-    }, { threshold: 0.6 });
-    counters.forEach(el => cio.observe(el));
+    }, { threshold: 0.45 });
+    statCards.forEach(el => sio.observe(el));
   } else {
-    counters.forEach(el => { el.textContent = el.dataset.count; });
+    statCards.forEach(el => el.classList.add('is-in'));
+    counters.forEach(el => { el.textContent = fmt(parseFloat(el.dataset.count) || 0, parseInt(el.dataset.decimals || '0', 10)); });
+  }
+
+  /* --- 3b. 進め方は3段：1 → 線 → 2 → 線 → 3 の順に出す --- */
+  const stepItems = Array.from(document.querySelectorAll('.steps2-row > *'));
+  if ('IntersectionObserver' in window && !reduced) {
+    const stio = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        stio.unobserve(entry.target);
+        entry.target.classList.add('is-in');
+      });
+    }, { threshold: 0.35, rootMargin: '0px 0px -40px 0px' });
+    stepItems.forEach(el => {
+      stio.observe(el);
+      // 出終わったら遅れを外す（ホバーの戻りが遅れないように）
+      el.addEventListener('transitionend', (e) => {
+        if (e.propertyName === 'opacity') el.style.transitionDelay = '0s';
+      });
+    });
+  } else {
+    stepItems.forEach(el => el.classList.add('is-in'));
   }
 
   /* --- 4. ヒーローのブロブをマウスでパララックス --- */
@@ -161,11 +213,15 @@ if (form) {
   bar.className = 'progress-bar';
   bar.setAttribute('aria-hidden', 'true');
   document.body.appendChild(bar);
+  let barTicking = false;
   function updateBar() {
+    barTicking = false;
     const h = document.documentElement;
     const max = h.scrollHeight - h.clientHeight;
-    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(h.scrollTop / max, 1) : 0) + ')';
   }
-  window.addEventListener('scroll', updateBar, { passive: true });
+  window.addEventListener('scroll', () => {
+    if (!barTicking) { barTicking = true; requestAnimationFrame(updateBar); }
+  }, { passive: true });
   updateBar();
 })();
