@@ -106,11 +106,8 @@
     z-index: 5;
     pointer-events: none;
   }
-  .sh-curtain-a, .sh-curtain-b {
-    position: absolute; left: 0; right: 0; height: 50.5%;
-    background: var(--navy-ink);
-    animation: shOpenA 1s cubic-bezier(0.7, 0, 0.2, 1) 0.55s forwards;
-  }
+  /* 幕（上下に開く板）は出さない。開いた瞬間に見出しとボタンが見えるようにする（2026-10-31・GA4でトップ平均3秒） */
+  .sh-curtain-a, .sh-curtain-b { display: none; }
   .sh-curtain-a { top: 0; }
   .sh-curtain-b { bottom: 0; animation-name: shOpenB; }
   .sh-curtain-line {
@@ -120,15 +117,15 @@
     transform: scaleX(0);
     animation: shLine 1.1s cubic-bezier(0.6, 0, 0.2, 1) 0.05s forwards;
   }
-  .sh-line > span { animation: shRise 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
-  .sh-line:nth-child(1) > span { animation-delay: 1.0s; }
-  .sh-line:nth-child(2) > span { animation-delay: 1.14s; }
-  .sh-line:nth-child(3) > span { animation-delay: 1.28s; }
-  .sh-en, .sh-after, .sh-cue { animation: shFade 0.9s ease both; }
-  .sh-en { animation-delay: 0.9s; }
-  .sh-after { animation-delay: 1.85s; }
-  .sh-cue { animation-delay: 2.3s; }
-  .sh-cue span { animation: shCue 2.2s ease-in-out 2.6s infinite; transform-origin: top; }
+  .sh-line > span { animation: shRise 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+  .sh-line:nth-child(1) > span { animation-delay: 0.05s; }
+  .sh-line:nth-child(2) > span { animation-delay: 0.12s; }
+  .sh-line:nth-child(3) > span { animation-delay: 0.19s; }
+  .sh-en, .sh-after, .sh-cue { animation: shFade 0.5s ease both; }
+  .sh-en { animation-delay: 0s; }
+  .sh-after { animation-delay: 0.25s; }
+  .sh-cue { animation-delay: 0.8s; }
+  .sh-cue span { animation: shCue 2.2s ease-in-out 1.3s infinite; transform-origin: top; }
   .sh-glow { animation: shGlow 14s ease-in-out infinite alternate; }
 }
 @keyframes shOpenA { to { transform: translateY(-100%); } }
