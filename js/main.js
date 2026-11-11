@@ -243,13 +243,14 @@ if (form) {
 })();
 
 /* LINEボタンが押されたら、GA4に「line_click」を送る（2026-10-24）
-   どのページのどのボタンかは、送る中身（page_path・button_text）で分かる */
+   どのページのどのボタンかは、送る中身（page_path・button_text・button_pos）で分かる */
 document.addEventListener('click', (e) => {
   const a = e.target.closest && e.target.closest('a[href*="lin.ee"], a[href*="line.me"]');
   if (!a || typeof gtag !== 'function') return;
   gtag('event', 'line_click', {
     link_url: a.href,
     button_text: (a.textContent || '').trim().slice(0, 40),
+    button_pos: a.getAttribute('data-pos') || '',
     page_path: location.pathname,
     transport_type: 'beacon'
   });
